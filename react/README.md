@@ -17,9 +17,9 @@
     try{
       const data = await functionThatReturnsPromise()
       doTheNextThing(data)
-    } catch(error){}
+    } catch(error){
       console.error(error)
-  }
+    }
 
   // DON'T:
   func = () => {
