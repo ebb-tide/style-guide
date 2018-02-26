@@ -7,27 +7,27 @@
   1. [Promises vs Async](#promises-vs-async)
   1. [Keys for Lists of JSX](#keys-for-lists-of-jsx)
 
-## Promises vs Async
+## Promises
 
-  - Prefer async/await pattern over promises with try/catch
+  - Use async/await (with try/catch), rather than chain syntax, where possible
 
 ```javascript
   // DO:
-  func = async () => {
-    try{
+  const coolAsyncAwaitPromise = async () => {
+    try {
       const data = await functionThatReturnsPromise()
       doTheNextThing(data)
-    } catch(error){
+    } catch (error) {
       console.error(error)
     }
 
   // DON'T:
-  func = () => {
+  const ickyChainedPromise = () => {
     functionThatReturnsPromise()
-      .then(data) => {
+      .then(data => {
         doTheNextThing(data)
       })
-      .catch((error) => {
+      .catch(error => {
         console.error(error)
       })
   }
