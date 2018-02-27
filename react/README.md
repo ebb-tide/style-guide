@@ -31,6 +31,9 @@
         console.error(error)
       })
   }
+
+  // NOTE: when iterable promise structures are necessary,
+  // chain syntax may be necessary, e.g. Promise.map()
 ```
 
   > Why?
