@@ -62,3 +62,23 @@
   - When a handler function is defined use "handle" (for example: `handleSaveCell`)
   - When a handler function is passed down as a prop use "on" (for example: `onSaveCell`)
   - This helps when locating the function definition via search or otherwise
+
+## Component Structure
+
+  - Top of File:
+    - Import `React, {Component, PropTypes}`
+    - Import `connect`, `bindActionCreators` (if needed)
+    - Import Libraries (ex: `classnames`, `moment`)
+    - Import Components
+    - Import Action Creators
+    - Import Constants
+  - Component Definition
+    - React lifecycle functions should be at top of list
+    - `render()` at bottom of list
+  - Bottom of File:
+    - Destructure PropTypes
+    - Default Props
+    - Props Validations
+    - `mapStateToProps`
+    - `mapDispatchToProps`
+    - Export
