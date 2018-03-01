@@ -56,3 +56,9 @@
   ```
 
   > Why?- [Index as a key is an anti-pattern - Robin Pokorny](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318)
+  
+## Naming Handler Functions
+
+  - When a handler function is defined use "handle" (for example: `handleSaveCell`)
+  - When a handler function is passed down as a prop use "on" (for example: `onSaveCell`)
+  - This helps when locating the function definition via search or otherwise
